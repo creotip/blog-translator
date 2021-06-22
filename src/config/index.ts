@@ -1,4 +1,4 @@
-export const translatorApiKey = process.env.REACT_APP_TRANSLATOR_API_KEY
+export const translatorApiKey = 'ef39e867f3a7483bb3fe545c03e32697'
 export const translatorLocation = 'centralus'
 export const translatorApiUrl = 'https://api.cognitive.microsofttranslator.com'
 

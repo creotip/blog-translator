@@ -26,6 +26,11 @@ const SinglePost = ({ title, body, id }: Post) => {
   const onClose = () => setIsOpen(false)
   const cancelRef = React.useRef()
 
+  const handleDelete = (id: number) => {
+    deletePost(id as number)
+    onClose()
+  }
+
   return (
     <SimpleGrid
       key={id}
@@ -82,7 +87,7 @@ const SinglePost = ({ title, body, id }: Post) => {
               <Button ref={cancelRef as any} onClick={onClose}>
                 Cancel
               </Button>
-              <Button colorScheme="red" onClick={() => deletePost(id as number)} ml={3}>
+              <Button colorScheme="red" onClick={() => handleDelete(id as number)} ml={3}>
                 Delete
               </Button>
             </AlertDialogFooter>
